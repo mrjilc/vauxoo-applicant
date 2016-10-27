@@ -18,4 +18,19 @@ INSERT INTO `employee_hobby` (`name`, `description`) VALUES ('Natacion', 'La nat
 
 INSERT INTO `hobby` (`id`, `id_hob`) VALUES ('123456789', '2'), ('123456789', '1'), ('123456780', '3'), ('123456780', '2'), ('123456788', '1'), ('123456788', '3'), ('123456787', '2'), ('123456787', '3');
 
+ALTER TABLE employee ADD Boss_id VARCHAR(10);
+ALTER TABLE employee ADD FOREIGN KEY (Boss_id) REFERENCES employee(id);
+
+UPDATE employee 
+SET Boss_id = '123456780' 
+WHERE employee.id = '123456789';
+
+UPDATE employee 
+SET Boss_id = '123456780' 
+WHERE employee.id = '123456788';
+
+UPDATE employee 
+SET Boss_id = '123456789' 
+WHERE employee.id = '123456787';
+
 -- ...
