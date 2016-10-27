@@ -11,7 +11,11 @@ INSERT INTO `employee_department` (`name`, `description`) VALUES ('Recursos Huma
 INSERT INTO `employee` (`id`, `first_name`, `last_name`, `id_de`) VALUES ('123456789', 'Jose', 'Perez', '2'), ('123456780', 'Maria', 'Lopez', '2'), ('123456788', 'Pedro', 'Castro', '1'), ('123456787', 'Juan', 'Roberts', '4');
 
 
-CREATE TABLE employee_hobby (
-);
+CREATE TABLE employee_hobby ( id_hob INT AUTO_INCREMENT NOT NULL ,  name VARCHAR(20) NOT NULL ,  description TEXT NOT NULL, PRIMARY KEY  (id_hob));
+CREATE TABLE hobby ( id_hob INT NOT NULL ,  id VARCHAR(10) NOT NULL, FOREIGN KEY (id_hob) REFERENCES employee_hobby (id_hob), FOREIGN KEY (id) REFERENCES employee (id));
+
+INSERT INTO `employee_hobby` (`name`, `description`) VALUES ('Natacion', 'La natación es el movimiento y el desplazamiento a través del agua mediante el uso de las extremidades corporales y por lo general sin utilizar ningún instrumento o apoyo para avanzar'), ('Yoga', 'Practica mental y fisica, de respiracion, relajacion con posturas.'), ('Pintar', 'Expresion por medio de tecnicas artisticas.');
+
+INSERT INTO `hobby` (`id`, `id_hob`) VALUES ('123456789', '2'), ('123456789', '1'), ('123456780', '3'), ('123456780', '2'), ('123456788', '1'), ('123456788', '3'), ('123456787', '2'), ('123456787', '3');
 
 -- ...
