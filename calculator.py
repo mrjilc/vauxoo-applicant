@@ -13,8 +13,7 @@ class CalculatorClass(object):
     list = []
     sum_num = 0
 
-    def num_list(self):
-        x = int(input("Ingrese Tamaño De La Lista: "))  # ask for the quantity of numbers to sum
+    def num_list(self,x):
         for i in range(x):
             # fill the list
             self.list.append(int(input("Ingrese Numero: ")))
@@ -29,5 +28,5 @@ class CalculatorClass(object):
         print("La Suma De Los Datos Es: ", self.sum_num)
 
 result = CalculatorClass()  # create the object
-result.num_list()  # Call the fuction for the list
+result.num_list(5)  # Call the fuction for the list
 result.sum()  # Do the sum and print the results
