@@ -21,5 +21,6 @@ class PrimeClass(object):
         return True
 
 num_prime = PrimeClass()  # create the object for the class
-num = int(input("Ingrese un numero: "))  # ask for the number
-print(num_prime.is_prime(num))  # show the result
+print(num_prime.is_prime(7))  # show the result
+num_prime2 = PrimeClass()
+print(num_prime2.is_prime(12))
