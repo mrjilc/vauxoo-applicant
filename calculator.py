@@ -8,13 +8,13 @@ to do the operation, after that we going to print the result
 class CalculatorClass(object):
     """
     Here we define two variables list and sum_num, the list we initiate in nothing only to fill
-    and in sum_num we are going to perform the sum
+     and in sum_num we are going to perform the sum
     """
     list = []
     sum_num = 0
 
     def num_list(self):
-        x = int(input("Ingrese cantidad de numeros: "))  # ask for the quantity of numbers to sum
+        x = int(input("Ingrese Tamaño De La Lista: "))  # ask for the quantity of numbers to sum
         for i in range(x):
             # fill the list
             self.list.append(int(input("Ingrese Numero: ")))
