@@ -1,7 +1,6 @@
 """
 this module content one class call PrimeClass, one Function call is_prime, inside is_prime
-we are going to make all the operation, outside is the input asking the numer we want to know
-if is prime or not, and the print of that question
+we are going to make all the operation
 """
 
 class PrimeClass(object):
@@ -19,7 +18,3 @@ class PrimeClass(object):
             if num_int % i == 0:    # if the modulo give a O is not prime, so return False
                 return False
         return True
-
-num_prime = PrimeClass()  # create the object for the class
-num = int(input("Ingrese un numero: "))  # ask for the number
-print(num_prime.is_prime(num))  # show the result
