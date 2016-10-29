@@ -12,7 +12,7 @@ class PrimeClass(object):
         """
         read the number and we proceed to do the operation num_int
         """
-        if num_int < 2:     
+        if num_int < 2:
             return False
         for num_loop in range(2, num_int):
             if num_int % num_loop == 0:
