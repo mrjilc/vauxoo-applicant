@@ -31,7 +31,7 @@ INSERT INTO employee (id, first_name, last_name, id_de) VALUES ('3', 'Juan', 'Ro
 INSERT INTO employee (id, first_name, last_name, id_de) VALUES ('4', 'Maria', 'Lopez', '1');
 
 CREATE TABLE employee_hobby ( 
-	id_hob INT NOT NULL ,  
+	id INT NOT NULL ,  
 	name VARCHAR(20) NOT NULL ,  
 	description TEXT NOT NULL, 
 	PRIMARY KEY  (id_hob)
@@ -40,7 +40,7 @@ CREATE TABLE employee_hobby (
 CREATE TABLE hobby ( 
 	id INT NOT NULL ,  
 	id INT NOT NULL, 
-	FOREIGN KEY (id_hob) REFERENCES employee_hobby (id_hob), 
+	FOREIGN KEY (id) REFERENCES employee_hobby (id_hob), 
 	FOREIGN KEY (id) REFERENCES employee (id)
 );
 
