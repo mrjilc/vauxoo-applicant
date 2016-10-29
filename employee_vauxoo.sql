@@ -38,16 +38,16 @@ CREATE TABLE employee_hobby (
 );
 
 CREATE TABLE hobby ( 
-	id_hob INT NOT NULL ,  
+	id INT NOT NULL ,  
 	id INT NOT NULL, 
 	FOREIGN KEY (id_hob) REFERENCES employee_hobby (id_hob), 
 	FOREIGN KEY (id) REFERENCES employee (id)
 );
 
 
-INSERT INTO employee_hobby (id_hob, name, description) VALUES ('1', 'Natacion', 'Accion de nadar.'); 
-INSERT INTO employee_hobby (id_hob, name, description) VALUES ('2', 'Yoga', 'Practica de yoga.'); 
-INSERT INTO employee_hobby (id_hob, name, description) VALUES ('3', 'Pintar', 'Accion de Pintar.');
+INSERT INTO employee_hobby (id, name, description) VALUES ('1', 'Natacion', 'Accion de nadar.'); 
+INSERT INTO employee_hobby (id, name, description) VALUES ('2', 'Yoga', 'Practica de yoga.'); 
+INSERT INTO employee_hobby (id, name, description) VALUES ('3', 'Pintar', 'Accion de Pintar.');
 
 
 INSERT INTO hobby (id, id_hob) VALUES ('1', '2'); 
@@ -72,6 +72,6 @@ WHERE employee.id = '3';
 
 UPDATE employee 
 SET Boss_id = '4' 
-WHERE employee.id = '3';
+WHERE employee.id = '2';
 
 -- ...
