@@ -1,6 +1,5 @@
 """
-This module content one class call CalculatorClass , and inside a function sum, we are going
-to do the operation, after that we going to print the result
+This module content one class call CalculatorClass
 """
 
 
@@ -11,10 +10,10 @@ class CalculatorClass(object):
 
     sum_num = 0
 
-    def sum(self, list):
+    def sum(self, num_list):
         """
         we are going to proceed to sum, whit a For loop and after the loop print the results
         """
-        for i in list:
-            self.sum_num += i
+        for num in num_list:
+            self.sum_num += num
         return self.sum_num
