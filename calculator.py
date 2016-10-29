@@ -17,4 +17,4 @@ class CalculatorClass(object):
         """
         for i in list:
             self.sum_num += i
-        print("La Suma De Los Datos Es: ", self.sum_num)
+        return self.sum_num
