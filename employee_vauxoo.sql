@@ -4,9 +4,9 @@
 --       Consider add ';' at end sentence.
 
 CREATE TABLE employee_department  ( 
-	id_de INT NOT NULL ,  
+	id INT NOT NULL ,  
 	name VARCHAR(20) NOT NULL ,  
-	description TEXT NOT NULL, PRIMARY KEY  (id_de)
+	description TEXT NOT NULL, PRIMARY KEY  (id)
 );
 
 CREATE TABLE employee ( 
@@ -15,15 +15,15 @@ CREATE TABLE employee (
 	last_name VARCHAR(20) NOT NULL, 
 	id_de INT NOT NULL , 
 	PRIMARY KEY  (id), 
-	FOREIGN KEY (id_de) REFERENCES employee_department (id_de)
+	FOREIGN KEY (id_de) REFERENCES employee_department (id)
 );
 
-INSERT INTO employee_department (id_de, name, description) VALUES ('1', 'Recursos Humanos', 'Gestiona Empleados'); 
-INSERT INTO employee_department (id_de, name, description) VALUES ('2', 'Administracion', 'Contabilidad y Dinero.'); 
-INSERT INTO employee_department (id_de, name, description) VALUES ('3', 'Gerencia', 'Gerenciar la empresa');
-INSERT INTO employee_department (id_de, name, description) VALUES ('4', 'Ventas', 'Encargado vender a clientes');
-INSERT INTO employee_department (id_de, name, description) VALUES ('5', 'Compras', 'Adquiere material necesario.');
-INSERT INTO employee_department (id_de, name, description) VALUES ('6', 'Produccion', 'Fabrica el producto');
+INSERT INTO employee_department (id, name, description) VALUES ('1', 'Recursos Humanos', 'Gestiona Empleados'); 
+INSERT INTO employee_department (id, name, description) VALUES ('2', 'Administracion', 'Contabilidad y Dinero.'); 
+INSERT INTO employee_department (id, name, description) VALUES ('3', 'Gerencia', 'Gerenciar la empresa');
+INSERT INTO employee_department (id, name, description) VALUES ('4', 'Ventas', 'Encargado vender a clientes');
+INSERT INTO employee_department (id, name, description) VALUES ('5', 'Compras', 'Adquiere material necesario.');
+INSERT INTO employee_department (id, name, description) VALUES ('6', 'Produccion', 'Fabrica el producto');
 
 INSERT INTO employee (id, first_name, last_name, id_de) VALUES ('1', 'Jose', 'Perez', '2'); 
 INSERT INTO employee (id, first_name, last_name, id_de) VALUES ('2', 'Pedro', 'Castro', '1'); 
@@ -34,13 +34,13 @@ CREATE TABLE employee_hobby (
 	id INT NOT NULL ,  
 	name VARCHAR(20) NOT NULL ,  
 	description TEXT NOT NULL, 
-	PRIMARY KEY  (id_hob)
+	PRIMARY KEY  (id)
 );
 
 CREATE TABLE hobby ( 
-	id INT NOT NULL ,  
+	id_hob INT NOT NULL ,  
 	id INT NOT NULL, 
-	FOREIGN KEY (id) REFERENCES employee_hobby (id_hob), 
+	FOREIGN KEY (id_hob) REFERENCES employee_hobby (id), 
 	FOREIGN KEY (id) REFERENCES employee (id)
 );
 
