@@ -1,7 +1,7 @@
 """
-this module content one class call PrimeClass, one Function call is_prime, inside is_prime
-we are going to make all the operation
+this module content one class call PrimeClass
 """
+
 
 class PrimeClass(object):
     """
@@ -14,7 +14,7 @@ class PrimeClass(object):
         """
         if num_int < 2:     # if the number is less than 2 is not prime, so return false
             return False
-        for i in range(2, num_int):  # create a For loop with a range between  2 and the number
-            if num_int % i == 0:    # if the modulo give a O is not prime, so return False
+        for num_loop in range(2, num_int):  # create a For loop with a range between  2 and the number
+            if num_int % num_loop == 0:    # if the modulo give a O is not prime, so return False
                 return False
         return True
