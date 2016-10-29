@@ -74,4 +74,3 @@ UPDATE employee
 SET Boss_id = '4' 
 WHERE employee.id = '2';
 
--- ...
